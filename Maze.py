@@ -1,4 +1,4 @@
-import GridViewer
+import Viewer
 
 EMPTY = 0
 WALL = 1
@@ -74,12 +74,16 @@ if __name__ == "__main__":
 
             elif grid[row][col] == END:
                 done = True
-                solved = True
-                print("Solved!") # Solved.
+                print("You stumble blindly into a solid concrete wall.")
+
+            elif cell == END: 
+                done = True 
+                solved = True 
+                print("SOLVED!")
                 
             else:
                 pass # Do nothing
-        
+
         charIndex += 1
     # end-while
 
@@ -88,4 +92,4 @@ if __name__ == "__main__":
         print("You have failed to escape. Future archeologists gaze upon your remains in baffelment") # Did not reach the end.
 
 
-    GridViewer.view(grid)
+    Viewer.view(grid)
