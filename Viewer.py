@@ -5,10 +5,10 @@ def view(grid):
         for j in range(len(grid[i])):
             
             if grid[i][j] == Maze.EMPTY:
-                print("  ", end = "")
+                print("!!", end = "")
                     
             elif grid[i][j] == Maze.WALL:
-                print("##", end = "")
+                print("@@", end = "")
                     
             elif grid[i][j] == Maze.START:
                 print("^^", end = "")
